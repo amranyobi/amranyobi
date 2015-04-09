@@ -1,0 +1,17 @@
+/****************************************/
+/*  jow17234 CSS Stylesheet         	*/
+/****************************************/
+#pstruk td, #rekapp td {
+	font: 20px/170% tahoma;
+}
+#pstruk,#rekapp{
+	margin: 0 100 0 0;
+	width:275px;
+	background:#fff;
+}
+
+#rekap{
+	margin: 0 auto;
+	width:280px;
+	background:#fff;
+}
