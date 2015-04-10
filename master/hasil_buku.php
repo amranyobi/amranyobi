@@ -34,8 +34,9 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
     <td><table width="100%" border="0" cellspacing="0" cellpadding="0" id="example" class="display">
       <thead>
         <tr>
-          <th width="50">Nomor</th>
-          <th width="200">Nama Buku</th>
+          <th width="5%">Nomor</th>
+          <th width="150">Nama Buku</th>
+          <th width="30">Modal Awal</th>
           <th width="5" align="center" valign="top">Aksi</th>
         </tr>
       </thead>
@@ -60,6 +61,13 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
 		  if ($ambil['tingkat']=='1')
 		  echo "</b>";
 		  ?></span></td>
+          <td class="table_title"><?
+          if ($ambil['modal']!='0')
+		  {
+			  	echo "Rp. ";
+		  		echo number_format($ambil['modal']);
+		  }?>     
+          </td>
           <td><div align="center">
           <?php
           $cari_buku = mysql_query("SELECT buku from tb_dedi where buku='$ambil[nomor]'");
@@ -131,7 +139,17 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
 			  <?
 			  }
 			  ?>
-			  /></label>
+			  /></label>Modal Awal
+		  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="50" name="modal" autocomplete="off"
+			  <?
+			  if ($id != '')
+			  {
+			  ?>
+			  value="<? echo $ambil2['modal'];?>"
+			  <?
+			  }
+			  ?>
+			  /><br /><br />
               <label>Klarifikasi
 		  	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="klarifikasi">
               <?php
