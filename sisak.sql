@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Apr 10, 2015 at 11:33 PM
+-- Generation Time: Jun 26, 2015 at 02:39 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -27,144 +27,145 @@ CREATE TABLE `tb_coa` (
   `tingkat` int(1) NOT NULL,
   `klarifikasi` int(3) NOT NULL,
   `modal` double NOT NULL,
+  `tipe` int(1) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=134 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=135 ;
 
 -- 
 -- Dumping data for table `tb_coa`
 -- 
 
-INSERT INTO `tb_coa` VALUES (1, '111', 'Kas', '', 1, 1, 0);
-INSERT INTO `tb_coa` VALUES (2, '111.01', 'Kas Besar', '111', 2, 1, 5000000000);
-INSERT INTO `tb_coa` VALUES (3, '111.02', 'Kas Kecil', '111', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (4, '112', 'Bank', '', 1, 1, 0);
-INSERT INTO `tb_coa` VALUES (5, '112.01', 'BNI (No. Rek : 8578589168)', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (6, '112.02', 'BCA (No. Rek : 836 009 279 9)', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (7, '112.03', 'BTN (No. Rek : 010060130 000016 3)', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (8, '112.04', 'BANK MANDIRI (No. Rek : 135-00-0030030-9)', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (9, '112.05', 'BRI 308', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (10, '112.06', 'BANK MANDIRI 5000', '112', 2, 1, 0);
-INSERT INTO `tb_coa` VALUES (11, '113', 'Piutang Usaha', '', 1, 2, 0);
-INSERT INTO `tb_coa` VALUES (12, '113.01', 'Piutang Usaha', '113', 2, 2, 0);
-INSERT INTO `tb_coa` VALUES (13, '117', 'Piutang Pemegang Saham', '', 1, 2, 0);
-INSERT INTO `tb_coa` VALUES (14, '118', 'Piutang Lain-lain', '', 1, 2, 0);
-INSERT INTO `tb_coa` VALUES (15, '119', 'Persediaan Barang', '', 1, 3, 0);
-INSERT INTO `tb_coa` VALUES (16, '119.01', 'Persediaan Apartement', '119', 2, 3, 0);
-INSERT INTO `tb_coa` VALUES (17, '120', 'WIP', '', 1, 4, 0);
-INSERT INTO `tb_coa` VALUES (18, '120.01', 'Apartement, Diponegoro 38A', '120', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (19, '120.01.01', 'Tanah Apartement Diponegoro 38A', '120.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (20, '120.01.02', 'Bangunan Apartement Diponegoro 38A', '120.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (21, '120.02', 'Hotel, Diponegoro 24 B', '120', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (22, '120.02.01', 'Tanah Hotel, Diponegoro 24B', '120.02', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (23, '120.02.02', 'Bangunan Hotel Diponegoro 24B', '120.02', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (24, '122', 'Biaya Dibayar Dimuka', '', 1, 4, 0);
-INSERT INTO `tb_coa` VALUES (25, '122.01', 'Sewa Bangunan Jl. Pandanaran no. 48', '122', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (26, '122.02', 'Sewa Bangunan Jl. Diponegoro no. 34', '122', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (27, '122.10', 'Biaya Dibayar Dimuka Lain-lain', '122', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (28, '123', 'Pajak Dibayar Dimuka', '', 1, 4, 0);
-INSERT INTO `tb_coa` VALUES (29, '123.01', 'PPN', '123', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (30, '123.02', 'PPh Final', '123', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (31, '123.03', 'PPh 3%', '123', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (32, '124', 'Beban Pra Usaha', '', 1, 4, 0);
-INSERT INTO `tb_coa` VALUES (33, '124.01', 'Beban Pra Usaha Apartement', '124', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (34, '124.01.01', 'Beban Pra Usaha Beban Umum dan Administrasi', '124.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (35, '124.01.01.01', 'Beban Pra Usaha Gaji', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (36, '124.01.01.02', 'Beban Pra Usaha Notaris', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (37, '124.01.01.03', 'Beban Pra Usaha APHT', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (38, '124.01.01.04', 'Beban Pra Usaha IMB dan Perijinan', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (39, '124.01.01.05', 'Beban Pra Usaha Iuran', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (40, '124.01.01.06', 'Beban Pra Usaha Administrasi Kantor', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (41, '124.01.01.07', 'Beban Pra Usaha Sewa Kantor', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (42, '124.01.01.08', 'Beban Pra Usaha Keperluan Kendaraan', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (43, '124.01.01.09', 'Beban Pra Usaha Kesejahteraan Karyawan', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (44, '124.01.01.10', 'Beban Pra Usaha Pemeliharaan Kantor dan Inventaris', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (45, '124.01.01.11', 'Beban Pra Usaha Pemeliharaan Telepon, Fax, Interne', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (46, '124.01.01.12', 'Beban Pra Usaha Listrik', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (47, '124.01.01.13', 'Beban Pra Usaha Air', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (48, '124.01.01.14', 'Beban Pra Usaha Perjalanan Dinas', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (49, '124.01.01.15', 'Beban Pra Usaha PPh 21', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (50, '124.01.01.16', 'Beban Pra Usaha Penyusutan', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (51, '124.01.01.25', 'Beban Pra Usaha Lain-lain', '124.01.01', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (52, '124.01.02', 'Beban Pra Usaha Pemasaran', '124.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (53, '124.01.02.01', 'Beban Pra Usaha Promosi', '124.01.02', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (54, '124.01.02.01', 'Beban Pra Usaha Komisi', '124.01.02', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (55, '124.01.03', 'Beban Pra Usaha Pendapatan Luar Usaha', '124.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (56, '124.01.03.01', 'Beban Pra Usaha Pendapatan Luar Usaha Jasa Giro', '124.01.03', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (57, '124.01.03.10', 'Beban Pra Usaha Pendapatan Luar Usaha Lain-lain', '124.01.03', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (58, '124.01.04', 'Beban Pra Usaha Beban Luar Usaha', '124.01', 3, 4, 0);
-INSERT INTO `tb_coa` VALUES (59, '124.01.04.01', 'Beban Pra Usaha Beban Luar Usaha Pajak Atas Bunga ', '124.01.04', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (60, '124.01.04.02', 'Beban Pra Usaha Beban Luar Usaha Biaya Bunga Bank', '124.01.04', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (61, '124.01.04.03', 'Beban Pra Usaha Beban Luar Usaha Biaya Provisi', '124.01.04', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (62, '124.01.04.10', 'Beban Pra Usaha Beban Luar Usaha Lain-lain', '124.01.04', 4, 4, 0);
-INSERT INTO `tb_coa` VALUES (63, '124.02', 'Beban Pra Usaha Hotel', '124', 2, 4, 0);
-INSERT INTO `tb_coa` VALUES (64, '211', 'Aset Tetap', '', 1, 5, 0);
-INSERT INTO `tb_coa` VALUES (65, '211.01', 'Tanah', '211', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (66, '211.02', 'Bangunan', '211', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (67, '211.03', 'Inventaris Kantor', '211', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (68, '211.04', 'Kendaraan', '211', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (69, '212', 'Akumulasi Penyusutan Aset Tetap', '', 1, 5, 0);
-INSERT INTO `tb_coa` VALUES (70, '212.02', 'Bangunan', '212', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (71, '212.03', 'Inventaris Kantor', '212', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (72, '212.04', 'Kendaraan', '212', 2, 5, 0);
-INSERT INTO `tb_coa` VALUES (73, '311', 'Hutang Usaha', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (74, '311.01', 'Hutang Usaha', '311', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (75, '312', 'Hutang Biaya', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (76, '312.01', 'Hutang Biaya Listrik', '312', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (77, '312.02', 'Hutang Biaya Air', '312', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (78, '312.03', 'Hutang Biaya Telepon', '312', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (79, '312.04', 'Hutang Biaya Bunga Bank', '312', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (80, '313', 'Hutang Pemegang Saham', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (81, '314', 'Hutang Pajak', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (82, '314.01', 'Hutang Pajak PPh 21', '314', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (83, '314.02', 'Hutang Pajak Pasal 4 Ayat 2', '314', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (84, '314.03', 'Hutang PPN Keluaran', '314', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (85, '314.04', 'Hutang Pajak PPh Pasal 23', '314', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (86, '317', 'Hutang Lain-lain', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (87, '317.01', 'Hutang Karyawan', '317', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (88, '317.02', 'Hutang lain-lain', '317', 2, 6, 0);
-INSERT INTO `tb_coa` VALUES (89, '318', 'Hutang Uang Muka Penjualan', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (90, '319', 'Hutang Uang Muka Lain-lain', '', 1, 6, 0);
-INSERT INTO `tb_coa` VALUES (91, '320', 'Hutang Bank', '', 1, 7, 0);
-INSERT INTO `tb_coa` VALUES (92, '320.01', 'Hutang BTN', '320', 2, 7, 0);
-INSERT INTO `tb_coa` VALUES (93, '320.02', 'Hutang BNI', '320', 2, 7, 0);
-INSERT INTO `tb_coa` VALUES (94, '321', 'Hutang Pihak Ketiga', '', 1, 7, 0);
-INSERT INTO `tb_coa` VALUES (95, '411', 'Modal Disetor', '', 1, 8, 0);
-INSERT INTO `tb_coa` VALUES (96, '412', 'Laba (Rugi) Ditahan', '', 1, 8, 0);
-INSERT INTO `tb_coa` VALUES (97, '413', 'Laba (Rugi) ', '', 1, 8, 0);
-INSERT INTO `tb_coa` VALUES (98, '511', 'Pendapatan', '', 1, 9, 0);
-INSERT INTO `tb_coa` VALUES (99, '511.01', 'Penjualan Apartement', '511', 2, 9, 0);
-INSERT INTO `tb_coa` VALUES (100, '511.02', 'Pendapatan Jasa', '511', 2, 9, 0);
-INSERT INTO `tb_coa` VALUES (101, '611', 'Beban Pokok Penjualan', '', 1, 10, 0);
-INSERT INTO `tb_coa` VALUES (102, '611.01', 'Beban Pokok Penjualan', '611', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (103, '711', 'Beban Administrasi dan Umum', '', 1, 10, 0);
-INSERT INTO `tb_coa` VALUES (104, '711.01', 'Beban Gaji', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (105, '711.02', 'Beban Notaris', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (106, '711.03', 'Beban APHT', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (107, '711.04', 'Beban IMB dan Perijinan', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (108, '711.05', 'Beban Iuran', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (109, '711.06', 'Beban Administrasi Kantor', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (110, '711.07', 'Beban Sewa Kantor', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (111, '711.08', 'Beban Keperluan Kendaraan', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (112, '711.09', 'Beban Kesejahteraan Karyawan', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (113, '711.10', 'Beban Pemeliharaan Kantor dan Inventaris Kantor', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (114, '711.11', 'Beban Telepon, Fax, Internet', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (115, '711.12', 'Beban Listrik', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (116, '711.13', 'Beban Air', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (117, '711.14', 'Beban Perjalanan Dinas', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (118, '711.15', 'Beban PPh 21', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (119, '711.16', 'Beban Penyusutan', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (120, '711.25', 'Beban Lain-lain', '711', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (121, '712.', 'Beban Pemasaran', '', 1, 10, 0);
-INSERT INTO `tb_coa` VALUES (122, '712.01', 'Beban Promosi', '712.', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (123, '712.02', 'Beban Komisi', '712.', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (124, '714', 'Pendapatan Luar Usaha', '', 1, 9, 0);
-INSERT INTO `tb_coa` VALUES (125, '714.01', 'Pendapatan Luar Usaha Jasa Giro', '714', 2, 9, 0);
-INSERT INTO `tb_coa` VALUES (126, '714.10', 'Pendapatan Luar Usaha Lain-lain', '714', 2, 9, 0);
-INSERT INTO `tb_coa` VALUES (127, '715', 'Beban Luar Usaha', '', 1, 10, 0);
-INSERT INTO `tb_coa` VALUES (128, '715.01', 'Beban Luar Usaha Pajak Atas Bunga Bank', '715', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (129, '715.02', 'Beban Luar Usaha Biaya Bunga Bank', '715', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (130, '715.03', 'Beban Luar Usaha Biaya Provisi', '715', 2, 10, 0);
-INSERT INTO `tb_coa` VALUES (131, '715.10', 'Beban Luar Usaha Lain-lain', '715', 2, 10, 0);
+INSERT INTO `tb_coa` VALUES (1, '111', 'Kas', '', 1, 1, 0, 2);
+INSERT INTO `tb_coa` VALUES (2, '111.01', 'Kas Besar', '111', 2, 1, 5000000, 2);
+INSERT INTO `tb_coa` VALUES (3, '111.02', 'Kas Kecil', '111', 2, 1, 4000000, 1);
+INSERT INTO `tb_coa` VALUES (4, '112', 'Bank', '', 1, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (5, '112.01', 'BNI (No. Rek : 8578589168)', '112', 2, 1, 3500000, 1);
+INSERT INTO `tb_coa` VALUES (6, '112.02', 'BCA (No. Rek : 836 009 279 9)', '112', 2, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (7, '112.03', 'BTN (No. Rek : 010060130 000016 3)', '112', 2, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (8, '112.04', 'BANK MANDIRI (No. Rek : 135-00-0030030-9)', '112', 2, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (9, '112.05', 'BRI 308', '112', 2, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (10, '112.06', 'BANK MANDIRI 5000', '112', 2, 1, 0, 0);
+INSERT INTO `tb_coa` VALUES (11, '113', 'Piutang Usaha', '', 1, 2, 0, 0);
+INSERT INTO `tb_coa` VALUES (12, '113.01', 'Piutang Usaha', '113', 2, 2, 0, 0);
+INSERT INTO `tb_coa` VALUES (13, '117', 'Piutang Pemegang Saham', '', 1, 2, 0, 0);
+INSERT INTO `tb_coa` VALUES (14, '118', 'Piutang Lain-lain', '', 1, 2, 0, 0);
+INSERT INTO `tb_coa` VALUES (15, '119', 'Persediaan Barang', '', 1, 3, 0, 0);
+INSERT INTO `tb_coa` VALUES (16, '119.01', 'Persediaan Apartement', '119', 2, 3, 0, 0);
+INSERT INTO `tb_coa` VALUES (17, '120', 'WIP', '', 1, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (18, '120.01', 'Apartement, Diponegoro 38A', '120', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (19, '120.01.01', 'Tanah Apartement Diponegoro 38A', '120.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (20, '120.01.02', 'Bangunan Apartement Diponegoro 38A', '120.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (21, '120.02', 'Hotel, Diponegoro 24 B', '120', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (22, '120.02.01', 'Tanah Hotel, Diponegoro 24B', '120.02', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (23, '120.02.02', 'Bangunan Hotel Diponegoro 24B', '120.02', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (24, '122', 'Biaya Dibayar Dimuka', '', 1, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (25, '122.01', 'Sewa Bangunan Jl. Pandanaran no. 48', '122', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (26, '122.02', 'Sewa Bangunan Jl. Diponegoro no. 34', '122', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (27, '122.10', 'Biaya Dibayar Dimuka Lain-lain', '122', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (28, '123', 'Pajak Dibayar Dimuka', '', 1, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (29, '123.01', 'PPN', '123', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (30, '123.02', 'PPh Final', '123', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (31, '123.03', 'PPh 3%', '123', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (32, '124', 'Beban Pra Usaha', '', 1, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (33, '124.01', 'Beban Pra Usaha Apartement', '124', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (34, '124.01.01', 'Beban Pra Usaha Beban Umum dan Administrasi', '124.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (35, '124.01.01.01', 'Beban Pra Usaha Gaji', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (36, '124.01.01.02', 'Beban Pra Usaha Notaris', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (37, '124.01.01.03', 'Beban Pra Usaha APHT', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (38, '124.01.01.04', 'Beban Pra Usaha IMB dan Perijinan', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (39, '124.01.01.05', 'Beban Pra Usaha Iuran', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (40, '124.01.01.06', 'Beban Pra Usaha Administrasi Kantor', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (41, '124.01.01.07', 'Beban Pra Usaha Sewa Kantor', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (42, '124.01.01.08', 'Beban Pra Usaha Keperluan Kendaraan', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (43, '124.01.01.09', 'Beban Pra Usaha Kesejahteraan Karyawan', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (44, '124.01.01.10', 'Beban Pra Usaha Pemeliharaan Kantor dan Inventaris', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (45, '124.01.01.11', 'Beban Pra Usaha Pemeliharaan Telepon, Fax, Interne', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (46, '124.01.01.12', 'Beban Pra Usaha Listrik', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (47, '124.01.01.13', 'Beban Pra Usaha Air', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (48, '124.01.01.14', 'Beban Pra Usaha Perjalanan Dinas', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (49, '124.01.01.15', 'Beban Pra Usaha PPh 21', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (50, '124.01.01.16', 'Beban Pra Usaha Penyusutan', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (51, '124.01.01.25', 'Beban Pra Usaha Lain-lain', '124.01.01', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (52, '124.01.02', 'Beban Pra Usaha Pemasaran', '124.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (53, '124.01.02.01', 'Beban Pra Usaha Promosi', '124.01.02', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (54, '124.01.02.01', 'Beban Pra Usaha Komisi', '124.01.02', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (55, '124.01.03', 'Beban Pra Usaha Pendapatan Luar Usaha', '124.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (56, '124.01.03.01', 'Beban Pra Usaha Pendapatan Luar Usaha Jasa Giro', '124.01.03', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (57, '124.01.03.10', 'Beban Pra Usaha Pendapatan Luar Usaha Lain-lain', '124.01.03', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (58, '124.01.04', 'Beban Pra Usaha Beban Luar Usaha', '124.01', 3, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (59, '124.01.04.01', 'Beban Pra Usaha Beban Luar Usaha Pajak Atas Bunga ', '124.01.04', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (60, '124.01.04.02', 'Beban Pra Usaha Beban Luar Usaha Biaya Bunga Bank', '124.01.04', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (61, '124.01.04.03', 'Beban Pra Usaha Beban Luar Usaha Biaya Provisi', '124.01.04', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (62, '124.01.04.10', 'Beban Pra Usaha Beban Luar Usaha Lain-lain', '124.01.04', 4, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (63, '124.02', 'Beban Pra Usaha Hotel', '124', 2, 4, 0, 0);
+INSERT INTO `tb_coa` VALUES (64, '211', 'Aset Tetap', '', 1, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (65, '211.01', 'Tanah', '211', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (66, '211.02', 'Bangunan', '211', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (67, '211.03', 'Inventaris Kantor', '211', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (68, '211.04', 'Kendaraan', '211', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (69, '212', 'Akumulasi Penyusutan Aset Tetap', '', 1, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (70, '212.02', 'Bangunan', '212', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (71, '212.03', 'Inventaris Kantor', '212', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (72, '212.04', 'Kendaraan', '212', 2, 5, 0, 0);
+INSERT INTO `tb_coa` VALUES (73, '311', 'Hutang Usaha', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (74, '311.01', 'Hutang Usaha', '311', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (75, '312', 'Hutang Biaya', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (76, '312.01', 'Hutang Biaya Listrik', '312', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (77, '312.02', 'Hutang Biaya Air', '312', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (78, '312.03', 'Hutang Biaya Telepon', '312', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (79, '312.04', 'Hutang Biaya Bunga Bank', '312', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (80, '313', 'Hutang Pemegang Saham', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (81, '314', 'Hutang Pajak', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (82, '314.01', 'Hutang Pajak PPh 21', '314', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (83, '314.02', 'Hutang Pajak Pasal 4 Ayat 2', '314', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (84, '314.03', 'Hutang PPN Keluaran', '314', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (85, '314.04', 'Hutang Pajak PPh Pasal 23', '314', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (86, '317', 'Hutang Lain-lain', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (87, '317.01', 'Hutang Karyawan', '317', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (88, '317.02', 'Hutang lain-lain', '317', 2, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (89, '318', 'Hutang Uang Muka Penjualan', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (90, '319', 'Hutang Uang Muka Lain-lain', '', 1, 6, 0, 0);
+INSERT INTO `tb_coa` VALUES (91, '320', 'Hutang Bank', '', 1, 7, 0, 0);
+INSERT INTO `tb_coa` VALUES (92, '320.01', 'Hutang BTN', '320', 2, 7, 0, 0);
+INSERT INTO `tb_coa` VALUES (93, '320.02', 'Hutang BNI', '320', 2, 7, 0, 0);
+INSERT INTO `tb_coa` VALUES (94, '321', 'Hutang Pihak Ketiga', '', 1, 7, 0, 0);
+INSERT INTO `tb_coa` VALUES (95, '411', 'Modal Disetor', '', 1, 8, 0, 0);
+INSERT INTO `tb_coa` VALUES (96, '412', 'Laba (Rugi) Ditahan', '', 1, 8, 0, 0);
+INSERT INTO `tb_coa` VALUES (97, '413', 'Laba (Rugi) ', '', 1, 8, 0, 0);
+INSERT INTO `tb_coa` VALUES (98, '511', 'Pendapatan', '', 1, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (99, '511.01', 'Penjualan Apartement', '511', 2, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (100, '511.02', 'Pendapatan Jasa', '511', 2, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (101, '611', 'Beban Pokok Penjualan', '', 1, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (102, '611.01', 'Beban Pokok Penjualan', '611', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (103, '711', 'Beban Administrasi dan Umum', '', 1, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (104, '711.01', 'Beban Gaji', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (105, '711.02', 'Beban Notaris', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (106, '711.03', 'Beban APHT', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (107, '711.04', 'Beban IMB dan Perijinan', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (108, '711.05', 'Beban Iuran', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (109, '711.06', 'Beban Administrasi Kantor', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (110, '711.07', 'Beban Sewa Kantor', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (111, '711.08', 'Beban Keperluan Kendaraan', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (112, '711.09', 'Beban Kesejahteraan Karyawan', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (113, '711.10', 'Beban Pemeliharaan Kantor dan Inventaris Kantor', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (114, '711.11', 'Beban Telepon, Fax, Internet', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (115, '711.12', 'Beban Listrik', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (116, '711.13', 'Beban Air', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (117, '711.14', 'Beban Perjalanan Dinas', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (118, '711.15', 'Beban PPh 21', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (119, '711.16', 'Beban Penyusutan', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (120, '711.25', 'Beban Lain-lain', '711', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (121, '712.', 'Beban Pemasaran', '', 1, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (122, '712.01', 'Beban Promosi', '712.', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (123, '712.02', 'Beban Komisi', '712.', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (124, '714', 'Pendapatan Luar Usaha', '', 1, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (125, '714.01', 'Pendapatan Luar Usaha Jasa Giro', '714', 2, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (126, '714.10', 'Pendapatan Luar Usaha Lain-lain', '714', 2, 9, 0, 0);
+INSERT INTO `tb_coa` VALUES (127, '715', 'Beban Luar Usaha', '', 1, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (128, '715.01', 'Beban Luar Usaha Pajak Atas Bunga Bank', '715', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (129, '715.02', 'Beban Luar Usaha Biaya Bunga Bank', '715', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (130, '715.03', 'Beban Luar Usaha Biaya Provisi', '715', 2, 10, 0, 0);
+INSERT INTO `tb_coa` VALUES (131, '715.10', 'Beban Luar Usaha Lain-lain', '715', 2, 10, 15000000, 2);
 
 -- --------------------------------------------------------
 
@@ -178,7 +179,7 @@ CREATE TABLE `tb_dedi` (
   `buku` varchar(20) NOT NULL,
   `tipe` int(1) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 -- 
 -- Dumping data for table `tb_dedi`
@@ -189,6 +190,12 @@ INSERT INTO `tb_dedi` VALUES (2, 1, '112.01', 1);
 INSERT INTO `tb_dedi` VALUES (3, 1, '111.02', 2);
 INSERT INTO `tb_dedi` VALUES (4, 1, '112.02', 2);
 INSERT INTO `tb_dedi` VALUES (5, 2, '112.02', 1);
+INSERT INTO `tb_dedi` VALUES (16, 5, '124.01.01.10', 2);
+INSERT INTO `tb_dedi` VALUES (15, 5, '123.02', 1);
+INSERT INTO `tb_dedi` VALUES (14, 5, '123.01', 1);
+INSERT INTO `tb_dedi` VALUES (13, 5, '122', 1);
+INSERT INTO `tb_dedi` VALUES (17, 5, '124.01.01.12', 2);
+INSERT INTO `tb_dedi` VALUES (18, 5, '124.01.01.13', 2);
 
 -- --------------------------------------------------------
 
@@ -200,7 +207,7 @@ CREATE TABLE `tb_jenis_transaksi` (
   `id` int(11) NOT NULL auto_increment,
   `nama` varchar(200) character set utf8 default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 -- 
 -- Dumping data for table `tb_jenis_transaksi`
@@ -208,6 +215,7 @@ CREATE TABLE `tb_jenis_transaksi` (
 
 INSERT INTO `tb_jenis_transaksi` VALUES (1, 'Pengeluaran Tunai');
 INSERT INTO `tb_jenis_transaksi` VALUES (2, 'Pengeluaran Non Tunai');
+INSERT INTO `tb_jenis_transaksi` VALUES (5, 'Pengeluaran Lagi');
 
 -- --------------------------------------------------------
 
@@ -449,19 +457,26 @@ CREATE TABLE `tb_transaksi` (
   `keterangan` varchar(50) NOT NULL,
   `nominal` double NOT NULL,
   `urut` int(3) NOT NULL,
+  `tipe` int(1) NOT NULL,
+  `transaksi_m` varchar(100) NOT NULL,
+  `b_debet` varchar(20) NOT NULL,
+  `b_kredit` varchar(20) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- 
 -- Dumping data for table `tb_transaksi`
 -- 
 
-INSERT INTO `tb_transaksi` VALUES (8, 2, '2015-04-07', 'Percobaan kesekian kali', 500000, 6);
-INSERT INTO `tb_transaksi` VALUES (2, 1, '2015-04-07', 'Percobaan 2', 500000, 2);
-INSERT INTO `tb_transaksi` VALUES (4, 2, '2015-04-09', 'non tunai 2x', 900000, 4);
-INSERT INTO `tb_transaksi` VALUES (5, 1, '2015-04-07', 'Percobaan 3', 400000, 3);
-INSERT INTO `tb_transaksi` VALUES (6, 1, '2015-04-07', 'Percobaan 4', 300000, 4);
-INSERT INTO `tb_transaksi` VALUES (7, 2, '2015-04-08', 'Percobaan 38', 800000, 5);
+INSERT INTO `tb_transaksi` VALUES (8, 2, '2015-04-07', 'Percobaan kesekian kali', 500000, 6, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (2, 1, '2015-04-07', 'Percobaan 2', 500000, 2, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (4, 2, '2015-04-09', 'non tunai 2x', 900000, 4, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (5, 1, '2015-04-07', 'Percobaan 3', 400000, 3, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (6, 1, '2015-04-07', 'Percobaan 4', 300000, 4, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (7, 2, '2015-04-08', 'Percobaan 38', 800000, 5, 0, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (10, 0, '2015-06-25', 'Ini keterangan 2', 6000000, 2, 2, 'Percobaan 2', '111.02', '124.01.01.13');
+INSERT INTO `tb_transaksi` VALUES (14, 1, '2015-06-26', 'ini keterangan tambahanx', 150000, 1, 1, '', '', '');
+INSERT INTO `tb_transaksi` VALUES (13, 0, '2015-06-26', 'Ini keterangan lagi', 100000000, 3, 2, 'Ini Percobaan Lagi', '113', '212.02');
 
 -- --------------------------------------------------------
 

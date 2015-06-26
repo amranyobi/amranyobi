@@ -6,6 +6,7 @@
 	$kla = $_POST['klarifikasi'];
 	$modal = $_POST['modal'];
 	$nomor = $_POST['nomor'];
+	$jenis_modal = $_POST['jenis_modal'];
 	$panjang = strlen($nomor);
 	$potong = $panjang - 3;
 	$parent = substr($nomor,0,$potong);
@@ -22,12 +23,12 @@
 	
 	if ($id == '')
 		{
-		$query = "INSERT INTO tb_coa VALUES('','$nomor','$nama','$parent','$tingkat','$kla','$modal')";
+		$query = "INSERT INTO tb_coa VALUES('','$nomor','$nama','$parent','$tingkat','$kla','$modal','$jenis_modal')";
 		$sql = mysql_query ($query) or die (mysql_error()); 
 		}
 		else
 		{
-		$query = "update tb_coa SET nomor='$nomor', nama='$nama', parent='$parent', tingkat='$tingkat', klarifikasi='$kla', modal='$modal' WHERE id='$id'";
+		$query = "update tb_coa SET nomor='$nomor', nama='$nama', parent='$parent', tingkat='$tingkat', klarifikasi='$kla', modal='$modal', tipe='$jenis_modal' WHERE id='$id'";
 		$sql = mysql_query ($query) or die (mysql_error());
 		}
 	

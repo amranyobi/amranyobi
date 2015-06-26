@@ -35,7 +35,7 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
       <thead>
         <tr>
           <th width="5%">Nomor</th>
-          <th width="150">Nama Buku</th>
+          <th width="150">COA</th>
           <th width="30">Modal Awal</th>
           <th width="5" align="center" valign="top">Aksi</th>
         </tr>
@@ -48,7 +48,8 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
 		?>
         <tr>
           <td class="table_date"><? echo $ambil['nomor'];?></td>
-          <td class="table_title"><span class="table_date"><?
+          <td class="table_title"><span class="table_date">
+            <?
           if ($ambil['tingkat']=='2')
 		  echo "&nbsp;&nbsp;- ";
 		  if ($ambil['tingkat']=='3')
@@ -60,28 +61,32 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
 		  echo $ambil['nama'];
 		  if ($ambil['tingkat']=='1')
 		  echo "</b>";
-		  ?></span></td>
+		  ?>
+          </span></td>
           <td class="table_title"><?
           if ($ambil['modal']!='0')
 		  {
 			  	echo "Rp. ";
 		  		echo number_format($ambil['modal']);
-		  }?>     
-          </td>
+				if ($ambil['tipe']=='1')
+				echo " (D)";
+				else if ($ambil['tipe']=='2')
+				echo " (K)";
+		  }?></td>
           <td><div align="center">
-          <?php
+            <?php
           $cari_buku = mysql_query("SELECT buku from tb_dedi where buku='$ambil[nomor]'");
 		  $hitung = mysql_num_rows($cari_buku);
 		  if ($hitung=='0')
 		  {
 		  ?>
-          <a onclick="return confirm('Anda yakin akan menghapus ?'); if (ok) return true; else return false" href="home.php?hal=master/hps_buku&amp;id=<? echo $ambil['id'];?>"><img src="img/cancel.jpg" alt="cancel"/></a>&nbsp;&nbsp;
-          <?php
+            <a onclick="return confirm('Anda yakin akan menghapus ?'); if (ok) return true; else return false" href="home.php?hal=master/hps_buku&amp;id=<? echo $ambil['id'];?>"><img src="img/cancel.jpg" alt="cancel"/></a>&nbsp;&nbsp;
+            <?php
 		  }
 		  ?>
-          <a href="home.php?hal=master/hasil_buku&id=<? echo $ambil['id'];?>"><img src="img/edit.jpg" alt="edit" border="0"/></a></div></td>
+            <a href="home.php?hal=master/hasil_buku&amp;id=<? echo $ambil['id'];?>"><img src="img/edit.jpg" alt="edit" border="0"/></a></div></td>
         </tr>
-      	<?
+        <?
 		}
 		?>
     </table></td>
@@ -139,17 +144,7 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
 			  <?
 			  }
 			  ?>
-			  /></label>Modal Awal
-		  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="50" name="modal" autocomplete="off"
-			  <?
-			  if ($id != '')
-			  {
-			  ?>
-			  value="<? echo $ambil2['modal'];?>"
-			  <?
-			  }
-			  ?>
-			  /><br /><br />
+			  /></label>
               <label>Klarifikasi
 		  	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="klarifikasi">
               <?php
@@ -173,7 +168,38 @@ $gol2 = mysql_query("SELECT * from tb_coa where id='$id'");
               </select>
               </label> 				
 			  <br />
-			  <br />  
+			  <br /> 
+              Modal Awal
+		  	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="20" name="modal" autocomplete="off"
+			  <?
+			  if ($id != '')
+			  {
+			  ?>
+			  value="<? echo $ambil2['modal'];?>"
+			  <?
+			  }
+			  ?>
+			  /><br />
+              Jenis Modal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="jenis_modal" type="radio" value="1" 
+              <?
+              if ($ambil2['tipe']=='1' || $ambil2['tipe']=='0' || $ambil2['tipe']=='')
+			  {
+			  ?>
+              	checked="checked"
+			  <?php
+			  }
+			  ?>
+              />Debet&nbsp;&nbsp;&nbsp;<input name="jenis_modal" type="radio" value="2"
+              <?
+              if ($ambil2['tipe']=='2')
+			  {
+			  ?>
+              	checked="checked"
+			  <?php
+			  }
+			  ?>
+              />Kredit
+              <br /><br />
 			  <input type="submit" value="<? if ($id == '')
 				echo "Tambah";
 				else

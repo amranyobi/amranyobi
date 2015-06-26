@@ -1,0 +1,60 @@
+/* CSS Document */
+* {
+margin:0px; padding:0px;
+}
+
+body {
+	background-color:#6D91CF;
+	font:11px arial;
+}
+
+img,a {
+	border:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+div#container {
+	margin:40px auto;
+	
+	
+	width:650px;
+	min-height:300px;
+	background-color:#7AC3EE;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+}
+
+div#container h1 {
+	padding:4px; margin:0px;
+	text-align:center;
+	font:20px Tahoma;
+	font-weight:bold;
+}
+
+table#tabelForm {
+	margin:0px auto;
+}
+
+td {
+	font:11px Arial;
+	vertical-align: top;
+	padding:4px;
+}
+
+td span.pesan{
+	display:block;
+	font-size:11px;
+	font-style: italic;
+	color:red;
+}
+
+div#copyright {
+	margin-right:30px;
+	margin-top:15px;
+	
+	font:11px arial;
+	font-weight:bold;
+}

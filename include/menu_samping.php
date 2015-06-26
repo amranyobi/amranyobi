@@ -13,10 +13,12 @@
 					<a href="#" class="ico_posts">Master</a>
 						<li><a href="home.php?hal=master/hasil_buku">Master COA</a></li>						
 						<li><a href="home.php?hal=master/hasil_transaksi">Master Transaksi</a></li>
+                        <li><a href="home.php?hal=master/rekap_modal">Neraca Awal</a></li>
 						<br>
 <li>
 					<a href="#" class="ico_posts">Aplikasi</a>
-                    	<li><a href="home.php?hal=master/hasil_aplikasi">Transaksi</a></li>			
+                    	<li><a href="home.php?hal=master/hasil_aplikasi">Transaksi</a></li>
+                        <li><a href="home.php?hal=master/hasil_aplikasi_manual">Transaksi Manual</a></li>			
 				</li>
 			</ul>
 

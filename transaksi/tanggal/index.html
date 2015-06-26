@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Nikolius" />
+	<meta name="Description" content="Demo jQueryUI Datepicker" />
+	<meta name="Keywords" content="Demo jQueryUI Datepicker" />	
+	<title>Demo jQueryUI Datepicker</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link type="text/css" href="jqueryui/css/smoothness/jquery-ui-1.8.6.custom.css" rel="Stylesheet" />	
+	<script type="text/javascript" src="jqueryui/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="jqueryui/js/jquery-ui-1.8.6.custom.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//1
+			$("#date1").datepicker();
+			
+			//2
+			$("#date2").datepicker({
+				dateFormat:"dd-mm-yy"
+			});
+			
+			//3
+			$("#date3").datepicker({
+				dateFormat:"dd-mm-yy",
+				minDate: -20, 
+				maxDate: "+1M +1D"
+			});
+			
+			//4
+			$("#date4").datepicker({				
+				dateFormat:"dd-mm-yy",
+				altField: "#altDate4",
+				altFormat: "DD, d MM, yy"
+			});
+			
+			//5
+			$("#inlineDatepicker").datepicker();
+			
+			//6
+			$("#date6").datepicker({				
+				dateFormat:"dd-mm-yy",
+				changeMonth:true,
+				changeYear:true
+			});
+			
+			//7
+			$("#date7").datepicker({				
+				dateFormat:"dd-mm-yy",
+				showOtherMonths: true,
+				selectOtherMonths: true
+			});
+			
+			//8
+			$("#date8").datepicker({				
+				dateFormat:"dd-mm-yy",
+				showWeek: true,
+				firstDay: 1
+			});
+			
+			//9
+			$("#date9").datepicker({				
+				dateFormat:"dd-mm-yy",
+				numberOfMonths: 3				
+			});
+			
+			//10
+			$("#date10").datepicker({				
+				dateFormat:"dd-mm-yy",
+				showOn: 'button',
+				buttonText: '...',		
+			});
+			
+			//11
+			$("#date11").datepicker({				
+				dateFormat:"dd-mm-yy",
+				showAnim:"bounce"	
+			});																		
+		});
+	</script>	
+</head>
+<body>
+<div id="container">
+	<h1>jQueryUI Datepicker Demo</h1>
+	<form method="post" action="">
+	<table id="tabelForm" align="center" cellpadding="4">
+		<tr>
+			<td width="150" align="right">1. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date1" />
+				<span class="pesan">[default]</span class="pesan">
+			<td>
+		</tr>
+		<tr>
+			<td align="right">2. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date2" />
+				<span class="pesan">[dengan date format, misalnya dd-mm-yy]</span class="pesan">
+			<td>
+		</tr>
+		<tr>
+			<td align="right">3. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date3" />
+				<span class="pesan">[hanya bisa milih dari range tanggal tertentu, contoh ini menampilkan<br />tanggal yg bisa dipilih
+				adalah dimulai dari 20 hari sebelum hari ini, sampai dengan 1 bulan lewat 1 hari ini dari hari ini. 
+				]</span class="pesan">
+			<td>
+		</tr>
+		<tr>
+			<td align="right">4. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date4" />
+				<input type="text" id="altDate4" size ="35" />
+				<span class="pesan">[mengembalikan nilai tanggal di input text alternatif dengan format yang lain juga]</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">5. Tanggal<td>
+			<td>
+				<div id="inlineDatepicker"></div>
+				<span class="pesan">[display inline, menampilkan langsung datepickernya]</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">6. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date6" />
+				<span class="pesan">
+					[Pilihan bulan dan tahun dalam combo box]
+				</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">7. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date7" />
+				<span class="pesan">
+					[munculkan tanggal selain bulan yg lagi ditampilkan, dan bisa dipilih]
+				</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">8. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date8" />
+				<span class="pesan">
+					[munculkan tampilan minggu keberapa]
+				</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">9. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date9" />
+				<span class="pesan">
+					[munculkan beberapa bulan sekaligus]
+				</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">10. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date10" />
+				<span class="pesan">
+					[munculkan datepicker dari button]
+				</span>
+			<td>
+		</tr>
+		<tr>
+			<td align="right">11. Tanggal<td>
+			<td>
+				<input type="text" size="15" id="date11" />
+				<span class="pesan">
+					[muncul dengan animasi]
+				</span>
+			<td>
+		</tr>
+	</table>
+	</form>	
+	<div id="copyright" align="right">
+		Copyright &copy; 2010 <a href="http://nikolius-luiso.web.id" title="">Nikolius Luiso</a>
+	</div>
+</div>
+</body>
+</html>
